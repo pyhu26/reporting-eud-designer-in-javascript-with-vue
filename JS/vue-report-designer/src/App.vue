@@ -1,16 +1,16 @@
 <template>
 <div>
-    <ReportDesignerComponent />
+    <WebDocumentViewer/>
 </div>
 </template>
 
 <script>
-import ReportDesignerComponent from './components/ReportDesignerComponent';
+import WebDocumentViewer from './components/ReportDesignerComponent';
 
 export default {
 name: 'app',
 components: {
-    ReportDesignerComponent
+    WebDocumentViewer
     }
 }
 </script>

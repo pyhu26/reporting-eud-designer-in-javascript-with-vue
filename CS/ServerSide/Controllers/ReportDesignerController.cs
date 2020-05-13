@@ -1,5 +1,6 @@
 ﻿using DevExpress.DataAccess.Sql;
 using DevExpress.Web.Mvc.Controllers;
+using DevExpress.XtraReports.Web.ClientControls;
 using DevExpress.XtraReports.Web.ReportDesigner;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -8,6 +9,8 @@ namespace ServerSide.Controllers
 {
     public class ReportDesignerController : ReportDesignerApiController
     {
+        public ClientSideModelSettings ClientSideModeSetting { get; private set; }
+
         public override ActionResult Invoke() {
             var result = base.Invoke();
             // Allow cross-domain requests.
@@ -34,8 +37,8 @@ namespace ServerSide.Controllers
         Dictionary<string, object> GetAvailableDataSources()
         {
             var dataSources = new Dictionary<string, object>();
-            SqlDataSource ds = new SqlDataSource("Northwind_Connection");
-            var query = SelectQueryFluentBuilder.AddTable("Products").SelectAllColumns().Build("Products");
+            SqlDataSource ds = new SqlDataSource("BS_PMS");
+            var query = SelectQueryFluentBuilder.AddTable("V_WEIGHT_DATA_11_H").SelectAllColumns().Build("V_WEIGHT_DATA_11_H");
             ds.Queries.Add(query);
             ds.RebuildResultSchema();
             dataSources.Add("SqlDataSource", ds);
