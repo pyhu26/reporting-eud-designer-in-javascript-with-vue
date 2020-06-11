@@ -20,7 +20,7 @@ mounted() {
     var designerOptions = {
         reportUrl: ko.observable("Products"), // The URL of a report that is opened in the Report Designer when the application starts.
         requestOptions: {
-        host: "http://localhost:54114/",
+        host: "http://192.168.61.239:54115/",        
         // Use this line for the ASP.NET MVC backend.
          getDesignerModelAction: "ReportDesigner/GetReportDesignerModel"
         

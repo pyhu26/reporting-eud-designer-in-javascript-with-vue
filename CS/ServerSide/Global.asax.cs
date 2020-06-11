@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using DevExpress.XtraReports.Web.Extensions;
+using DevExpress.XtraReports.Web.ReportDesigner;
 
 namespace ServerSide {
     public class MvcApplication : System.Web.HttpApplication {
@@ -14,6 +15,7 @@ namespace ServerSide {
 
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             ReportStorageWebExtension.RegisterExtensionGlobal(new MyReportStorage());
+            DefaultReportDesignerContainer.RegisterDataSourceWizardConfigFileConnectionStringsProvider();
         }
     }
 }

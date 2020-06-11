@@ -22,7 +22,6 @@ namespace ServerSide {
             Settings.Default.StorageOptions.RootDirectory = path;
 
             LoadLocalFileToReport(path);
-
         }
 
         private void LoadLocalFileToReport(string path)
