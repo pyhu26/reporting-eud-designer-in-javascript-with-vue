@@ -25,6 +25,7 @@ mounted() {
          getDesignerModelAction: "ReportDesigner/GetReportDesignerModel"
         
         // Uncomment this line if you use an ASP.NET Core backend.
+        // test git        
         // invokeAction: "WebDocumentViewer/Invoke"
             }
     };
